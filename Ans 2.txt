@@ -1,0 +1,43 @@
+/*Write a C++ program to accpet worker information Worker_Name, No_Of_Hours_Worked,
+Pay_Rate and Salary. Write necessary functions to calculate and display the salary of Worker. (Use
+Default values for Pay_Rate Rs. 500 per hours)*/
+#include<iostream>
+using namespace std;
+class Worker
+{
+   private:
+   	string name;
+   	int pay_rate=500,salary=0;
+   	float no_of_hours_worked;
+   	public:
+   		void info(string str,float n)
+   		{
+   			name=str;
+   			no_of_hours_worked=n;
+   			salary;
+		   }
+		   void Salary()
+		   {
+		   	salary=pay_rate*no_of_hours_worked;
+		   }
+		   void display()
+		   {
+		   	cout<<"\nName of the worker is:-"<<name;
+		   	cout<<"\n"<<name<<"'s"<<" Salary is:-"<<salary;
+		   }
+       	
+};
+main(){
+Worker work1;
+string name;
+int hours;
+float n;
+cout<<"\nEnter the name of Worker=";
+getline(cin,name);
+cout<<"\nEnter the number of hours worker worked=";
+cin>>hours;
+work1.info(name,hours);
+work1.Salary();
+work1.display();
+
+}
